@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="723.0" prefWidth="1043.0" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.UserController">
+   <children>
+      <MenuBar maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="39.0" prefWidth="1043.0" style="-fx-background-color: darkgrey;">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="m_clear" mnemonicParsing="false" onAction="#ClearAction" text="Clear" />
+                  <MenuItem fx:id="m_logout" mnemonicParsing="false" onAction="#LogoutAction" text="LogOut" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="m_help" mnemonicParsing="false" onAction="#HelpAction" text="Instructions" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TextField fx:id="tf_name" layoutX="22.0" layoutY="111.0" prefHeight="26.0" prefWidth="247.0" />
+      <Label layoutX="22.0" layoutY="60.0" prefHeight="16.0" prefWidth="171.0" text="Name:">
+         <font>
+            <Font size="19.0" />
+         </font></Label>
+      <TextField fx:id="tf_last" layoutX="22.0" layoutY="210.0" prefHeight="26.0" prefWidth="247.0" />
+      <Label layoutX="22.0" layoutY="155.0" prefHeight="16.0" prefWidth="171.0" text="Last Name:">
+         <font>
+            <Font size="19.0" />
+         </font></Label>
+      <Label layoutX="358.0" layoutY="58.0" prefHeight="29.0" prefWidth="271.0" text="Programming Languages:">
+         <font>
+            <Font size="19.0" />
+         </font></Label>
+      <CheckBox fx:id="cb_java" layoutX="365.0" layoutY="115.0" mnemonicParsing="false" text="Java" />
+      <CheckBox fx:id="cb_python" layoutX="364.0" layoutY="158.0" mnemonicParsing="false" text="Python" />
+      <CheckBox fx:id="cb_other" layoutX="365.0" layoutY="201.0" mnemonicParsing="false" onAction="#OtherAction" text="Others" />
+      <TextField fx:id="tf_other" disable="true" layoutX="471.0" layoutY="197.0" prefHeight="26.0" prefWidth="205.0" />
+      <Separator layoutX="335.0" layoutY="1.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="723.0" prefWidth="0.0" />
+      <Label layoutX="358.0" layoutY="292.0" prefHeight="24.0" prefWidth="247.0" text="English Language:">
+         <font>
+            <Font size="19.0" />
+         </font></Label>
+      <RadioButton fx:id="rb_basic" layoutX="366.0" layoutY="344.0" mnemonicParsing="false" text="Zero">
+         <toggleGroup>
+            <ToggleGroup fx:id="eng" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="rb_med" layoutX="366.0" layoutY="385.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="192.0" text="Somewhat knowlegable" toggleGroup="$eng" />
+      <RadioButton fx:id="rb_high" layoutX="366.0" layoutY="430.0" mnemonicParsing="false" text="Antidisestablishmentarianism" toggleGroup="$eng" />
+      <ComboBox fx:id="c_kursy" layoutX="708.0" layoutY="111.0" prefHeight="26.0" prefWidth="291.0" />
+      <Label layoutX="696.0" layoutY="60.0" prefHeight="16.0" prefWidth="291.0" text="Course:">
+         <font>
+            <Font size="19.0" />
+         </font></Label>
+      <Button fx:id="btn_submit" layoutX="696.0" layoutY="640.0" mnemonicParsing="false" onMouseClicked="#submitAction" prefHeight="48.0" prefWidth="314.0" style="-fx-background-color: darkgrey;" text="SAVE" />
+      <ImageView fitHeight="237.0" fitWidth="306.0" layoutX="14.0" layoutY="274.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@linux_coding.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
