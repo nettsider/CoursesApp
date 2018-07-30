@@ -1,3 +1,6 @@
+create database usersjdbc DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
+
+
 CREATE TABLE logowanko (
 login varchar(50) primary key,
 pass  varchar(50) not null,
